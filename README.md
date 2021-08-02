@@ -25,8 +25,8 @@ Consumer - > function
  </ul>
  
  ******IMP******
- Map and Filter stay within their swim lanes, reduce function cuts the swim lanes to reduce the stream
-     filter       map             reduce
+<p> Map and Filter stay within their swim lanes, reduce function cuts the swim lanes to reduce the stream
+<p>     filter       map             reduce
 <p>- - - - - - - - - - - - - - - - - - 0 - - - - - - - -
 <p> x1   block                        \
 <p>- - - - - - - - - - - - - - - - - - \- - - - - - - -
@@ -38,4 +38,4 @@ Consumer - > function
 <p>- - - - - - - - - - - - - - - - - - - - - - \- - - -
                                              final result
  
- result becomes the feedback in the next operation. 
+<p> result becomes the feedback in the next operation. 
