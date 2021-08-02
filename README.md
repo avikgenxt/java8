@@ -24,9 +24,9 @@ Consumer - > function
 <li>map -> no of output = number of input. no guarantee on type of o/p, Stream<T> map takes Function<T,R> to return Stream<R></li>
  </ul>
  
-******IMP******
+<pre>******IMP******
 <p> Map and Filter stay within their swim lanes, reduce function cuts the swim lanes to reduce the stream
-<p><b>     filter             map                   reduce
+<p>+++++filter++++++++map++++++++++++++reduce
 <p>- - - - - - - - - - - - - - - - - - 0 - - - - - - - -
 <p> x1   block                        \
 <p>- - - - - - - - - - - - - - - - - - \- - - - - - - -
@@ -36,6 +36,7 @@ Consumer - > function
 <p>- - - - - - - - - - - - - - - - - - - - -\ - - - - -
 <p> x4   allow     transform                 result = result + transformed x4
 <p>- - - - - - - - - - - - - - - - - - - - - - \- - - -
-                                             <p>final result
+                                             final result
  
 <p> result becomes the feedback in the next operation. 
+</pre>
