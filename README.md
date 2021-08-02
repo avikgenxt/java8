@@ -16,6 +16,7 @@ Method ref limitations - cant use if there is a method conflict one static one i
 parallel stream - Use with Caution
 
 Stream - A bunch of funtion waiting to be evoluted. Only abstraction / non mutated pipeline
+
 Function Composition --> Pipeline of transformation
 No change in values of collection (no mutation in original collection)
 filter -> number of elements in o/p <= no. of elements in i/p, takes Predicate<T> for Stream of type T
