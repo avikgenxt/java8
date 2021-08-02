@@ -22,6 +22,9 @@ Consumer - > function
 <li>No change in values of collection (no mutation in original collection)</li>
 <li>filter -> number of elements in o/p <= no. of elements in i/p, takes Predicate<T> for Stream of type T</li>
 <li>map -> no of output = number of input. no guarantee on type of o/p, Stream<T> map takes Function<T,R> to return Stream<R></li>
+<li>reduce - Stream<t> reduce takes 2 parameters fist of type<T>, second param is BiFunction<R,T,R> to produce a result of R, T inputType, R input and result</li>
+ <li> reduce can yeild both one element of collection of elements</li>
+ 
  </ul>
  
 <pre>******IMP******
@@ -38,5 +41,13 @@ Consumer - > function
 <p>- - - - - - - - - - - - - - - - - - - - - - \- - - -
                                              final result
  
-<p> result becomes the feedback in the next operation. 
+<p> result becomes the feedback in the next operation.
 </pre>
+ 
+ Special Reduce / Common Stram collections
+ <ul>
+  <li>
+   Mutability is okay, sharing is nice, shared mutability is devils work
+   **http://henrikeichenhardt.blogspot.com/2013/06/why-shared-mutable-state-is-root-of-all.html**
+ </ul>
+ 
