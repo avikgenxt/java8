@@ -26,7 +26,7 @@ Consumer - > function
  
 ******IMP******
 <p> Map and Filter stay within their swim lanes, reduce function cuts the swim lanes to reduce the stream
-<p>     filter             map                   reduce
+<p><b>     filter             map                   reduce
 <p>- - - - - - - - - - - - - - - - - - 0 - - - - - - - -
 <p> x1   block                        \
 <p>- - - - - - - - - - - - - - - - - - \- - - - - - - -
@@ -36,6 +36,6 @@ Consumer - > function
 <p>- - - - - - - - - - - - - - - - - - - - -\ - - - - -
 <p> x4   allow     transform                 result = result + transformed x4
 <p>- - - - - - - - - - - - - - - - - - - - - - \- - - -
-                                             final result
+                                             <p>final result
  
 <p> result becomes the feedback in the next operation. 
