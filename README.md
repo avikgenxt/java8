@@ -38,4 +38,4 @@ Consumer - > function
 - - - - - - - - - - - - - - - - - - - - - - \- - - -
                                              final result
  
- result becomes the feedback in the next operation. 
+ result becomes the feedback in the next operation.
