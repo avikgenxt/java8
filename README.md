@@ -26,7 +26,7 @@ Consumer - > function
  
 <pre>******IMP******
 <p> Map and Filter stay within their swim lanes, reduce function cuts the swim lanes to reduce the stream
-<p>+++++filter++++++++map++++++++++++++reduce
+<p>     filter       map            reduce
 <p>- - - - - - - - - - - - - - - - - - 0 - - - - - - - -
 <p> x1   block                        \
 <p>- - - - - - - - - - - - - - - - - - \- - - - - - - -
