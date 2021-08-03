@@ -57,3 +57,4 @@ Intermediate operation - Postponed for evaluation and Terminal Operation - Trigg
  Lazy feature - one element in tthe stream flows through all the intermediate operations and terminal operations so all of the elements are not processed at one go. If no terminal operation then no computation, the evalutation is posponted till terminal opperation is called.
  
  Lazy evolution is only possible if the function has no side effects, so no way the function is printing anything or logging anything.
+Any function that returns a stream from a stream is lazy.
