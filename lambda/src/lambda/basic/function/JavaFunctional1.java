@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class JavaFunctional1 {
 
@@ -47,7 +48,7 @@ public class JavaFunctional1 {
 				,new Person("ANJAN", Gender.MALE,"68")
 				,new Person("ARINDAM", Gender.MALE,"29")
 				,new Person("DIPU", Gender.FEMALE,"60")
-				,new Person("AVI", Gender.MALE,"36"));
+				,new Person("AVIK", Gender.MALE,"38"));
 		
 		Map<String,Person> map2 = persons.stream()
 			.collect(Collectors.toMap( p-> p.getName(),p->p));
@@ -66,6 +67,22 @@ public class JavaFunctional1 {
 						Collectors.mapping(Person::getAge, Collectors.toList())));
 		
 		System.out.println(map4);
+		
+		int result = Stream.iterate(1, e->e+1) //unbound , lazy
+		.filter(e -> e%2==0)//unbound , lazy
+		.filter(e -> Math.sqrt(e)>20)//unbound , lazy
+		.mapToInt(e->e*2)//unbound , lazy
+		.limit(20) //sized, lazy
+		.sum(); //terminal operation;
+		
+		System.out.println(result);
+		
+		//Any function that returns a stream from a stream is lazy.
+		System.out.println(Stream.iterate(1, e->e+1) //unbound , lazy
+				.filter(e -> e%2==0)//unbound , lazy
+				.filter(e -> Math.sqrt(e)>20)//unbound , lazy
+				.mapToInt(e->e*2)//unbound , lazy
+				.limit(20));
 	}
 	
 }
