@@ -50,4 +50,11 @@ Consumer - > function
    Mutability is okay, sharing is nice, shared mutability is devils work
    **http://henrikeichenhardt.blogspot.com/2013/06/why-shared-mutable-state-is-root-of-all.html**
  </ul>
+
+ Streams operation -
+Intermediate operation - Postponed for evaluation
+Terminal Operation - Triggers the evaluation
  
+ Lazy feature - one element in tthe stream flows through all the intermediate operations and terminal operations so all of the elements are not processed at one go. If no terminal operation then no computation, the evalutation is posponted till terminal opperation is called.
+ 
+ Lazy evolution is only possible if the function has no side effects, so no way the function is printing anything or logging anything.
