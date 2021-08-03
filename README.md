@@ -52,8 +52,7 @@ Consumer - > function
  </ul>
 
  Streams operation -
-Intermediate operation - Postponed for evaluation
-Terminal Operation - Triggers the evaluation
+Intermediate operation - Postponed for evaluation and Terminal Operation - Triggers the evaluation
  
  Lazy feature - one element in tthe stream flows through all the intermediate operations and terminal operations so all of the elements are not processed at one go. If no terminal operation then no computation, the evalutation is posponted till terminal opperation is called.
  
