@@ -58,3 +58,5 @@ Intermediate operation - Postponed for evaluation and Terminal Operation - Trigg
  
  Lazy evolution is only possible if the function has no side effects, so no way the function is printing anything or logging anything.
 Any function that returns a stream from a stream is lazy.
+ 
+ The Reduce function takes the collection and reduces to single or multiple value where the length of result is less than / equal to the original collection
