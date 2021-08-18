@@ -1,4 +1,4 @@
-package lambda.basic.function;
+ package lambda.basic.function;
 
 import java.util.ArrayList;
 import java.util.Arrays;
