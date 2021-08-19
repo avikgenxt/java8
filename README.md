@@ -60,3 +60,5 @@ Intermediate operation - Postponed for evaluation and Terminal Operation - Trigg
 Any function that returns a stream from a stream is lazy.
  
  The Reduce function takes the collection and reduces to single or multiple value where the length of result is less than / equal to the original collection
+ 
+ Reduce can produce either one value - Reduce or collection(s) - Collect
