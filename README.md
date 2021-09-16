@@ -67,3 +67,5 @@ Any function that returns a stream from a stream is lazy.
  
  Lazy depends on purity of function, a function that returns the same result every time when we use the same input - idempotency. So no side effects.
  Pure functions do not change anything, and pure functions do not depend on anything that may possiblily change
+ 
+ use unmodififiable list set and map to ensure no mutation after function evolution is complete
