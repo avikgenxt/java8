@@ -61,4 +61,9 @@ Any function that returns a stream from a stream is lazy.
  
  The Reduce function takes the collection and reduces to single or multiple value where the length of result is less than / equal to the original collection
  
- Reduce can produce either one value - Reduce or collection(s) - Collect
+ Reduce can produce either one value - Reduce or collection(s) - Collect.. reduce converts a stream into something more concrete, so it may be single, may not be.
+
+ Functional programing depends on Functional Composition - Filter.Map.Reduce and Laziness
+ 
+ Lazy depends on purity of function, a function that returns the same result every time when we use the same input - idempotency. So no side effects.
+ Pure functions do not change anything, and pure functions do not depend on anything that may possiblily change
