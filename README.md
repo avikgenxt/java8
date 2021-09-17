@@ -69,3 +69,6 @@ Any function that returns a stream from a stream is lazy.
  Pure functions do not change anything, and pure functions do not depend on anything that may possiblily change
  
  use unmodififiable list set and map to ensure no mutation after function evolution is complete
+ 
+ Collector can take a funtion as first argument and another collector as second argument
+ Collecting and then is opposite of collector, it will first collect and then run the function
