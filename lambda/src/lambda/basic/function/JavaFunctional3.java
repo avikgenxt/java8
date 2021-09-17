@@ -48,7 +48,29 @@ public class JavaFunctional3 {
 		System.out.println(
 				listPerson()
 				.stream()
-				.collect(groupingBy(person->person.getName(), mapping(Person::getAge, toList()))));
+				.collect(
+						groupingBy(person->person.getName(), mapping(Person::getAge, toList())))
+				);
+		
+		//.collect(groupingBy(person->person.getName(), mapping(Person::getAge, toList()))));
+		//means
+		//Collectors(function, collectors(function, collectors))
+		System.out.println("**********************************************************");
+		System.out.println(
+				listPerson2()
+				.stream()
+				.collect(
+						groupingBy(person->person.getName(), counting()))
+				);
+
+		
+		System.out.println("**********************************************************");
+		System.out.println(
+				listPerson2()
+				.stream()
+				.collect(
+						groupingBy(person->person.getName(),collectingAndThen(counting(), Long::intValue)))
+				);
 
 	}
 	
@@ -61,5 +83,16 @@ public class JavaFunctional3 {
 				,new Person("ARINDAM", Gender.MALE,"29")
 				,new Person("DIPU", Gender.FEMALE,"60")
 				,new Person("AVIK", Gender.MALE,"38"));
+	}
+	
+	public static List<Person> listPerson2(){
+		return Arrays.asList(new Person("AVIK", Gender.MALE,"36")
+				,new Person("AAD", Gender.MALE,"2")
+				,new Person("ANU", Gender.FEMALE,"34")
+				,new Person("ANJAN", Gender.MALE,"68")
+				,new Person("ARINDAM", Gender.MALE,"29")
+				,new Person("DIPU", Gender.FEMALE,"60")
+				,new Person("AVIK", Gender.MALE,"38")
+				,new Person("AVIK", Gender.MALE,"37"));
 	}
 }
