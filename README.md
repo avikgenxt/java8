@@ -72,3 +72,6 @@ Any function that returns a stream from a stream is lazy.
  
  Collector can take a funtion as first argument and another collector as second argument
  Collecting and then is opposite of collector, it will first collect and then run the function
+ 
+ Map vs Mapping-  Use Map when we transforn in the stream use mapping when we map transformation in middle of reduce
+ Filter vs Filtering Use filter in stream, in the middle of transform we can use filtering

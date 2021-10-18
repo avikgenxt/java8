@@ -3,7 +3,9 @@ package lambda.basic.function;
 import static java.util.stream.Collectors.*;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Objects;
 
 public class JavaFunctional3 {
 
@@ -23,6 +25,14 @@ public class JavaFunctional3 {
 		.map(Person::getName)
 		.map(String::toUpperCase)
 		.collect(toList());
+		/**
+		 * A Collector is specified by four functions that work together to accumulate entries into a mutable result container, and optionally perform a final transform on the result. They are:
+		 * creation of a new result container (supplier())
+		 * incorporating a new data element into a result container (accumulator())
+		 * combining two result containers into one (combiner())
+		 * performing an optional final transform on the container (finisher())
+		 */
+		
 		/* toList () ====
 		 * start with an empty list implementation 1
 		 * create a list of objects and add one element 2
@@ -89,6 +99,49 @@ public class JavaFunctional3 {
 				.collect(
 						groupingBy(person->person.getName(),collectingAndThen(counting(), Long::intValue)))
 				);
+		
+		System.out.println("**********************************************************");
+		System.out.println("**************************SUM********************************");
+		System.out.println(listPerson2().stream()
+				.map(Person::getAge)
+				.filter(Objects::nonNull)
+				.mapToInt(Integer::valueOf)
+				.sum());
+		
+		
+		System.out.println("**********************************************************");
+		System.out.println("**************************MAX********************************");
+		System.out.println(listPerson2().stream()
+				.map(Person::getAge)
+				.filter(Objects::nonNull)
+				.mapToInt(Integer::valueOf)
+				.max());
+		
+		
+		System.out.println("**********************************************************");
+		System.out.println("**************************MIN********************************");
+		System.out.println(listPerson2().stream()
+				.map(Person::getAge)
+				.filter(Objects::nonNull)
+				.mapToInt(Integer::valueOf)
+				.min());
+
+		System.out.println("**********************************************************");
+		System.out.println("**************************MAX BY MIN BY********************************");
+
+		System.out.println(listPerson2().stream().
+				collect(maxBy(Comparator.comparing(Person::getAge))));
+		
+		System.out.println(listPerson2().stream().
+				collect(minBy(Comparator.comparing(Person::getAge))));
+
+		
+		String name =  listPerson2().stream().
+				collect(collectingAndThen(
+						maxBy(Comparator.comparing(Person::getAge)), 
+						person->person.map(Person::getName).orElse("")));
+		
+		System.out.println(name);		
 
 	}
 	
