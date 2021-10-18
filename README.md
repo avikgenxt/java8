@@ -85,3 +85,5 @@ For One to many use flatMap tp transform Stream<T> to Stream<R>
 For a double loop use flat map
 
 We can perform a flatmap while collecting
+
+//reduce - SUM MIN MAX REDUCE COLLECT
