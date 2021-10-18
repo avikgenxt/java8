@@ -75,3 +75,13 @@ Any function that returns a stream from a stream is lazy.
  
  Map vs Mapping-  Use Map when we transforn in the stream use mapping when we map transformation in middle of reduce
  Filter vs Filtering Use filter in stream, in the middle of transform we can use filtering
+
+
+FlatMap - Map is performed first then collection is flattened out flatMap(function <T>, Iterator<R>) will return Stream<R>, Stream is an Iterator, so FlatMap takes a funtion to map and then a Stream to perform the flatening
+For one to one funtion use map to transform Stream<T> to Stream<R>
+For one to many use map to transform Stream<t> to Stream<Collection<R>>
+For One to many use flatMap tp transform Stream<T> to Stream<R> 
+
+For a double loop use flat map
+
+We can perform a flatmap while collecting
